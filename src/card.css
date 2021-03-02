@@ -1,0 +1,238 @@
+.col-3.fitUi-card-col {
+  padding: 10px;
+}
+
+.card {
+  height: 290px;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgb(46 49 52 / 40%);
+  transition: all 0.2s ease-in-out;
+}
+
+.card.active {
+  box-shadow: 0 7px 12px 0 rgb(46 49 52 / 30%);
+  animation: swing;
+  animation-duration: 0.4s;
+  animation-delay: 0.2s;
+}
+
+.fitUi-card-img {
+  max-height: 165px;
+  height: 100%;
+}
+
+.fitUI-overlay-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 165px;
+  color: #fff;
+  text-align: center;
+}
+
+.fitUI-overlay-container p {
+  margin-bottom: 5px;
+}
+
+.fitUi-overlay-content {
+  position: absolute;
+  top: 33px;
+  right: 0;
+  width: 100%;
+}
+
+.fitUi-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 165px;
+  background-color: #0b0b0d;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.fitUi-overlay-ct {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 900;
+  z-index: 1;
+}
+
+.fitUi-overlay-text {
+  font-size: 0.625rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.fitUi-overlay-icon {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.card-body.fitUi-card-body {
+  padding: 0.75rem;
+}
+
+.card-title.fitUi-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.fitUi-metrics {
+  font-size: 0.6rem;
+  font-weight: 700;
+  margin-top: -2px;
+}
+
+img.fitUi-thumbnail {
+  max-width: 30px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-view-details {
+  opacity: 0;
+  background-color: transparent;
+  color: #1961cf;
+  border: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: opacity 0.5s ease-in-out;
+  outline: none;
+  box-shadow: none;
+  position: absolute;
+  bottom: 10px;
+  padding: 0;
+}
+
+.btn-view-details.active {
+  opacity: 1;
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+.animate__swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+
+/* change to slide effect in tablet view or smaller */
+
+.card-list > .row {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  float: left;
+  width: 100vw;
+  margin: 14px auto;
+  height: 320px;
+  padding-top: 15px;
+}
+
+.card-list > .row > .col-3 {
+  display: inline-block;
+  padding: 0;
+  margin: auto 6px;
+  width: 265px;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100% !important;
+}
+
+.card-title.fitUi-card-title {
+  white-space: pre-wrap;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px !important;
+  }
+
+  .card-title.fitUi-card-title {
+    white-space: unset;
+  }
+
+  .card-list > .row {
+    display: flex;
+    overflow-x: unset;
+    white-space: unset;
+    float: unset;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: auto;
+  }
+
+  .card-list > .row > .col-3 {
+    display: block;
+    padding: 10px;
+    margin: unset;
+    width: 100%;
+    max-width: 25%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px !important;
+  }
+}
